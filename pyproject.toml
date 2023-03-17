@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "andrew-ng-machine-learning"
+version = "0.1.0"
+description = ""
+authors = ["HarryMWinters <harrymcwinters@gmail.com>"]
+readme = "README.md"
+packages = [{include = "andrew_ng_machine_learning"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.12"
+jupyterhub = "^3.1.1"
+jupyter-server = "^2.2.1"
+jupyterlab = "^3.6.1"
+notebook = "^6.5.2"
+matplotlib = "^3.7.0"
+numpy = "^1.24.2"
+tensorflow = "^2.11.0"
+sympy = "^1.11.1"
+scikit-learn = "^1.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pylint = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
