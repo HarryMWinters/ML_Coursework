@@ -30,4 +30,4 @@ repos:
         entry: pylint
         language: system
         types: [python]
-        args: ["--disable=fixme", "--ignore-paths=tests/*"]
+        args: ["--disable=invalid-name"]
