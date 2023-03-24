@@ -60,7 +60,6 @@ def select_threshold(
     step_size = (max(p_val) - min(p_val)) / 1000
 
     for epsilon in np.arange(min(p_val), max(p_val), step_size):
-        ### START CODE HERE ###
         true_positives = np.sum(np.logical_and(p_val < epsilon, y_val == 1))
         false_positives = np.sum(np.logical_and(p_val < epsilon, y_val == 0))
         false_negatives = np.sum(np.logical_and(p_val >= epsilon, y_val == 1))
@@ -69,8 +68,6 @@ def select_threshold(
         recall = true_positives / (true_positives + false_negatives)
 
         F1 = (2 * precision * recall) / (precision + recall)
-
-        ### END CODE HERE ###
 
         if F1 > best_F1:
             best_F1 = F1
