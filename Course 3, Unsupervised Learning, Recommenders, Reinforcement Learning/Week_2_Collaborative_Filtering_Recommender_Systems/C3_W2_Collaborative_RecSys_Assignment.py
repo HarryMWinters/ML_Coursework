@@ -82,7 +82,14 @@ def cofi_cost_func(
 
 
 # TODO: Understand this
-def cofi_cost_func_v(X, W, b, Y, R, lambda_):
+def cofi_cost_func_v(
+    X,
+    W,
+    b,
+    Y,
+    R,
+    lambda_,
+):
     """
     Returns the cost for the content-based filtering
     Vectorized for speed. Uses tensorflow operations to be compatible with custom
@@ -104,3 +111,48 @@ def cofi_cost_func_v(X, W, b, Y, R, lambda_):
         tf.reduce_sum(X**2) + tf.reduce_sum(W**2)
     )
     return J
+
+
+import tensorflow as tf
+
+num_outputs = 32
+tf.random.set_seed(1)
+user_NN = tf.keras.models.Sequential(
+    [
+        ### START CODE HERE ###
+        tf.keras.layers.Dense(units=256, activation="relu"),
+        tf.keras.layers.Dense(units=128, activation="relu"),
+        tf.keras.layers.Dense(units=num_outputs, activation="linear"),
+        ### END CODE HERE ###
+    ]
+)
+
+item_NN = tf.keras.models.Sequential(
+    [
+        ### START CODE HERE ###
+        tf.keras.layers.Dense(units=256, activation="relu"),
+        tf.keras.layers.Dense(units=128, activation="relu"),
+        tf.keras.layers.Dense(units=num_outputs, activation="linear"),
+        ### END CODE HERE ###
+    ]
+)
+
+N = t.TypeVar("N", int, np.int32, np.int64)
+
+
+def sq_dist(
+    a: np.ndarray[t.Tuple[N], np.dtype[np.float64]],
+    b: np.ndarray[t.Tuple[N], np.dtype[np.float64]],
+) -> float:
+    """
+    Returns the squared distance between two vectors
+    Args:
+      a (ndarray (n,)): vector with n features
+      b (ndarray (n,)): vector with n features
+    Returns:
+      d (float) : distance
+    """
+    ### START CODE HERE ###
+    d = np.sum((a - b) ** 2)
+    ### END CODE HERE ###
+    return float(d)
