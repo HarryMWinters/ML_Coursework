@@ -1,15 +1,17 @@
-from typing import TypeVar, TypedDict
-
-import numpy as np
-from numpy import typing as npt
 import copy
+from typing import TypedDict
+from typing import TypeVar
+
 import matplotlib.pyplot as plt
+import numpy as np
 import sklearn
 import sklearn.datasets
 import sklearn.linear_model
-
-from nptyping import NDArray, Shape, Float, Bool
-
+from nptyping import Bool
+from nptyping import Float
+from nptyping import NDArray
+from nptyping import Shape
+from numpy import typing as npt
 
 InputType = NDArray[Shape["2, 400"], Float]
 
