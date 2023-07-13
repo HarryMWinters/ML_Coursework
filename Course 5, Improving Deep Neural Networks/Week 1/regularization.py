@@ -1,9 +1,9 @@
 # import packages
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import scipy.io
 import sklearn
 import sklearn.datasets
-import scipy.io
 
 
 def model(
