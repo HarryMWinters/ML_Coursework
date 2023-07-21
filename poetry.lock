@@ -813,6 +813,18 @@ files = [
 graph = ["objgraph (>=1.7.2)"]
 
 [[package]]
+name = "dlai-tools"
+version = "0.5.7"
+description = "Deployment script for notebooks"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "dlai_tools-0.5.7-py3-none-any.whl", hash = "sha256:205cda61b67f9fdd0308479ba670081a413a2a43bf2ad07ba4704456502f30a2"},
+    {file = "dlai_tools-0.5.7.tar.gz", hash = "sha256:2901b26d33b3f5f4b72a11365a4f4add91ef37abad9b566dd2a78820ba0959d5"},
+]
+
+[[package]]
 name = "executing"
 version = "1.2.0"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -4083,4 +4095,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8, <3.12"
-content-hash = "99e88cd4df6560d5be324b1f9925e55b1a7ba92dfd59eec6dc1a7522b1d70401"
+content-hash = "c8bd98dd1159f41c3b9555ba5ebf87848f4e9ddf717a5226e085f4649b303aa7"
