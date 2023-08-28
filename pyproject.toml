@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "andrew_ng_machine_learning"}]
 
 [tool.poetry.dependencies]
-python = ">=3.8, <3.12"
+python = ">=3.10, <3.12"
 jupyterhub = "^3.1.1"
 jupyter-server = "^2.2.1"
 jupyterlab = "^3.6.1"
@@ -19,6 +19,7 @@ sympy = "^1.11.1"
 scikit-learn = "^1.2.1"
 nptyping = "^2.5.0"
 dlai-tools = "^0.5.7"
+music21 = "^9.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
