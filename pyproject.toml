@@ -21,6 +21,9 @@ nptyping = "^2.5.0"
 dlai-tools = "^0.5.7"
 music21 = "^9.1.0"
 emoji = "^2.8.0"
+tqdm = "^4.66.1"
+faker = "^19.6.0"
+pydub = "^0.25.1"
 
 
 [tool.poetry.group.dev.dependencies]
