@@ -24,6 +24,7 @@ emoji = "^2.8.0"
 tqdm = "^4.66.1"
 faker = "^19.6.0"
 pydub = "^0.25.1"
+transformers = "^4.33.1"
 
 
 [tool.poetry.group.dev.dependencies]

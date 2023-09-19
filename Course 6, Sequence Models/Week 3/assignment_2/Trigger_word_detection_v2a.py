@@ -1,3 +1,7 @@
+import typing as t
+
+t.TYPE_CHECKING = True
+
 import numpy as np
 from td_utils import graph_spectrogram
 from td_utils import match_target_amplitude
